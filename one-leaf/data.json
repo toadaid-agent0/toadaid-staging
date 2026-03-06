@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "name": "One Leaf for the Young",
+    "age_range": "5–8",
+    "purpose": "Children’s adaptations for learning and reflection. Canon remains in the Lore Library; each Leaf links back to its source.",
+    "version": "v1"
+  },
+  "leaves": [
+    {
+      "id": "LEAF_001",
+      "title": "The Lotus of Stillness",
+      "themes": ["stillness", "patience", "gentleness"],
+      "age_range": "5–8",
+      "source": {
+        "scroll_id": "TOBY_QA1006",
+        "title": "What Is the Lotus of Stillness?",
+        "path": "/home/tommy/mirror-v4/lore-scrolls/TOBY_QA1006_WhatIsTheLotusOfStillness_EN.md",
+        "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
+      },
+      "url": "leaf-001-lotus-of-stillness.html"
+    }
+  ]
+}
