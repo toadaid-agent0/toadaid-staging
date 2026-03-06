@@ -18,6 +18,19 @@
         "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
       },
       "url": "leaf-001-lotus-of-stillness.html"
+    },
+    {
+      "id": "LEAF_002",
+      "title": "Water Doesn’t Fight the Stone",
+      "themes": ["patience", "endurance", "gentleness"],
+      "age_range": "5–8",
+      "source": {
+        "scroll_id": "TOBY_L490",
+        "title": "Ledger Remembers",
+        "path": "/home/tommy/mirror-v4/lore-scrolls/TOBY_L490_LedgerRemembers_2025-09-08_EN.md",
+        "note": "Leaf 002 draws from the canon line: ‘time erodes stone’ — teaching gentle endurance."
+      },
+      "url": "leaf-002-water-stone.html"
     }
   ]
 }
