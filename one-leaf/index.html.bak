@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🍃 One Leaf for the Young | ToadAid</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    :root{ --bg:#f7f7f2; --card:#fff; --ink:#222; --muted:#666; --ring:#ddd; --shadow:0 2px 10px rgba(0,0,0,.06); }
+    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); }
+    header{ position:sticky; top:0; background:#fff; border-bottom:1px solid var(--ring); padding:14px 16px; z-index:20; }
+    header h1{ margin:0; font-size:1.2rem; }
+    header .sub{ margin-top:6px; color:var(--muted); font-size:.95rem; }
+    main{ max-width:900px; margin:0 auto; padding:16px; }
+    .note{ background:#fff; border:1px solid var(--ring); border-radius:12px; padding:12px 14px; box-shadow:var(--shadow); }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:14px; }
+    .card{ background:var(--card); border:1px solid var(--ring); border-radius:12px; padding:14px; box-shadow:var(--shadow); }
+    .card h2{ margin:0 0 6px 0; font-size:1.05rem; }
+    .meta{ color:var(--muted); font-size:.9rem; }
+    a.btn{ display:inline-block; margin-top:10px; padding:8px 10px; border:1px solid var(--ring); border-radius:10px; text-decoration:none; color:var(--ink); background:#fff; }
+    a.btn:hover{ background:#fafafa; }
+    footer{ text-align:center; color:#777; font-size:.85rem; padding:24px 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍃 One Leaf for the Young</h1>
+    <div class="sub">Children’s Corner (ages 5–8) — gentle stories + tiny games for parent & kid.</div>
+  </header>
+
+  <main>
+    <div class="note">
+      <b>Guardian note:</b> These Leaves are teaching adaptations.
+      Canon lives in the <a href="/lore/">Toadgod Lore Library</a>. Each Leaf links back to its source scroll.
+    </div>
+
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <footer>© Toadgod Lore · Preserved by <b>ToadAid 🐸</b></footer>
+
+  <script>
+    async function load(){
+      const res = await fetch('./data.json', {cache:'no-store'});
+      const data = await res.json();
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+
+      for(const leaf of (data.leaves||[])){
+        const el = document.createElement('div');
+        el.className = 'card';
+        el.innerHTML = `
+          <h2>${leaf.title}</h2>
+          <div class="meta">Themes: ${(leaf.themes||[]).join(', ')} · Age: ${leaf.age_range||''}</div>
+          <div class="meta" style="margin-top:6px;">Source: ${leaf.source?.scroll_id || ''} — ${leaf.source?.title || ''}</div>
+          <a class="btn" href="${leaf.url}">Open Leaf →</a>
+        `;
+        grid.appendChild(el);
+      }
+    }
+    load().catch(err=>{
+      const grid = document.getElementById('grid');
+      grid.innerHTML = `<div class="card"><b>Could not load Leaves.</b><div class="meta">${err}</div></div>`;
+    });
+  </script>
+</body>
+</html>

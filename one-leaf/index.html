@@ -4,33 +4,51 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>🍃 One Leaf for the Young | ToadAid</title>
+  <meta name="description" content="Gentle story-leaves for young readers (ages 5–8): calm pond tales with tiny reflections, adapted from the Toadgod Lore scrolls." />
   <link rel="stylesheet" href="/style.css" />
   <style>
-    :root{ --bg:#f7f7f2; --card:#fff; --ink:#222; --muted:#666; --ring:#ddd; --shadow:0 2px 10px rgba(0,0,0,.06); }
-    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); }
-    header{ position:sticky; top:0; background:#fff; border-bottom:1px solid var(--ring); padding:14px 16px; z-index:20; }
-    header h1{ margin:0; font-size:1.2rem; }
-    header .sub{ margin-top:6px; color:var(--muted); font-size:.95rem; }
-    main{ max-width:900px; margin:0 auto; padding:16px; }
-    .note{ background:#fff; border:1px solid var(--ring); border-radius:12px; padding:12px 14px; box-shadow:var(--shadow); }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:14px; }
-    .card{ background:var(--card); border:1px solid var(--ring); border-radius:12px; padding:14px; box-shadow:var(--shadow); }
-    .card h2{ margin:0 0 6px 0; font-size:1.05rem; }
-    .meta{ color:var(--muted); font-size:.9rem; }
-    a.btn{ display:inline-block; margin-top:10px; padding:8px 10px; border:1px solid var(--ring); border-radius:10px; text-decoration:none; color:var(--ink); background:#fff; }
-    a.btn:hover{ background:#fafafa; }
-    footer{ text-align:center; color:#777; font-size:.85rem; padding:24px 12px; }
+    :root{
+      --bg:#f5f1e6; --card:#fff; --ink:#2f2f2f; --muted:#6b7266;
+      --green:#355e3b; --green-soft:#eef4ea; --green-line:#d8e4d2;
+      --gold:#ffd23f; --gold-ink:#1a1a1a;
+      --ring:#e3ddcc; --shadow:0 2px 10px rgba(0,0,0,.07);
+    }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    header{ background:var(--green); color:#fff; padding:26px 16px 22px; text-align:center; }
+    header .crumb{ display:inline-block; color:#cfe3d4; font-size:.9rem; text-decoration:none; margin-bottom:8px; }
+    header .crumb:hover{ color:#fff; text-decoration:underline; }
+    header h1{ margin:0; font-size:1.7rem; letter-spacing:.3px; }
+    header .sub{ margin-top:8px; color:#e2e2e2; font-size:1rem; font-style:italic; }
+    main{ max-width:900px; margin:0 auto; padding:18px 16px 8px; }
+    .note{ background:#fff8e6; border:1px solid #f0e2b6; border-radius:14px; padding:12px 16px; box-shadow:var(--shadow); font-size:.97rem; }
+    .note a{ color:var(--green); font-weight:600; }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:16px; }
+    .card{ background:var(--card); border:1px solid var(--ring); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); transition:transform .15s ease, box-shadow .15s ease; }
+    .card:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.10); }
+    .art{ height:130px; display:flex; align-items:center; justify-content:center; background:linear-gradient(#eaf4f0,#d9ebe4); }
+    .art svg{ width:200px; height:120px; }
+    .card-body{ padding:12px 16px 16px; }
+    .card h2{ margin:0 0 8px 0; font-size:1.15rem; color:#2f4a35; }
+    .chips{ margin:0 0 4px 0; }
+    .chip{ display:inline-block; background:var(--green-soft); border:1px solid var(--green-line); color:var(--green); border-radius:999px; padding:2px 10px; font-size:.8rem; margin:2px 6px 2px 0; }
+    .chip.age{ background:#fff4cc; border-color:#eedd9e; color:#7a6410; }
+    .meta{ color:var(--muted); font-size:.88rem; margin-top:8px; }
+    a.btn{ display:inline-block; margin-top:12px; padding:9px 16px; border:none; border-radius:10px; text-decoration:none; color:var(--gold-ink); background:var(--gold); font-weight:700; box-shadow:0 2px 6px rgba(0,0,0,.12); }
+    a.btn:hover{ background:#f5c518; }
+    footer{ text-align:center; color:#777; font-size:.85rem; padding:26px 12px; }
   </style>
 </head>
 <body>
   <header>
+    <a class="crumb" href="/childrens-corner/">← Children's Corner</a>
     <h1>🍃 One Leaf for the Young</h1>
-    <div class="sub">Children’s Corner (ages 5–8) — gentle stories + tiny games for parent & kid.</div>
+    <div class="sub">Gentle stories + tiny reflections for parent &amp; kid (ages 5–8).</div>
   </header>
 
   <main>
     <div class="note">
-      <b>Guardian note:</b> These Leaves are teaching adaptations.
+      <b>🐸 Guardian note:</b> These Leaves are teaching adaptations.
       Canon lives in the <a href="/lore/">Toadgod Lore Library</a>. Each Leaf links back to its source scroll.
     </div>
 
@@ -40,6 +58,43 @@
   <footer>© Toadgod Lore · Preserved by <b>ToadAid 🐸</b></footer>
 
   <script>
+    function art(id){
+      if(id === 'LEAF_001'){
+        /* The Lotus of Stillness — a lotus resting on a still pond */
+        return `<svg viewBox="0 0 200 120" role="img" aria-label="A lotus resting on a still pond" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="162" cy="28" r="10" fill="#ffd23f" opacity=".55"/>
+          <ellipse cx="100" cy="92" rx="86" ry="17" fill="#bfe0d8"/>
+          <ellipse cx="100" cy="90" rx="46" ry="10" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="2"/>
+          <ellipse cx="100" cy="90" rx="62" ry="13" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="2"/>
+          <ellipse cx="58" cy="88" rx="20" ry="6" fill="#4c8c5c"/>
+          <path d="M100 44 C94 60 94 72 100 80 C106 72 106 60 100 44 Z" fill="#f7c9d4"/>
+          <path d="M100 80 C88 76 79 65 82 52 C93 59 99 68 100 80 Z" fill="#f2b8c9"/>
+          <path d="M100 80 C112 76 121 65 118 52 C107 59 101 68 100 80 Z" fill="#f2b8c9"/>
+          <path d="M100 80 C86 83 73 79 68 68 C81 68 93 73 100 80 Z" fill="#eeaec2"/>
+          <path d="M100 80 C114 83 127 79 132 68 C119 68 107 73 100 80 Z" fill="#eeaec2"/>
+        </svg>`;
+      }
+      if(id === 'LEAF_002'){
+        /* Water Doesn't Fight the Stone — a stream flowing around a smooth stone */
+        return `<svg viewBox="0 0 200 120" role="img" aria-label="A stream flowing calmly around a smooth stone" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="66" width="200" height="54" fill="#bfe0d8"/>
+          <ellipse cx="100" cy="74" rx="36" ry="24" fill="#9aa5a1"/>
+          <ellipse cx="89" cy="65" rx="13" ry="8" fill="#c2ccc8"/>
+          <path d="M14 80 C46 70 68 84 100 80" fill="none" stroke="#7fc4b4" stroke-width="4" stroke-linecap="round"/>
+          <path d="M118 84 C140 78 162 88 188 80" fill="none" stroke="#7fc4b4" stroke-width="4" stroke-linecap="round"/>
+          <path d="M24 100 C60 92 96 104 176 96" fill="none" stroke="#a5d8cb" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="158" cy="34" rx="9" ry="4" fill="#4c8c5c" transform="rotate(-24 158 34)"/>
+          <circle cx="46" cy="52" r="2.5" fill="#ffffff" opacity=".7"/>
+          <circle cx="66" cy="44" r="2" fill="#ffffff" opacity=".55"/>
+        </svg>`;
+      }
+      /* generic leaf */
+      return `<svg viewBox="0 0 200 120" role="img" aria-label="A green leaf" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 26 C62 44 58 84 100 100 C142 84 138 44 100 26 Z" fill="#4c8c5c"/>
+        <path d="M100 34 L100 94" stroke="#2f5e3a" stroke-width="3" stroke-linecap="round"/>
+      </svg>`;
+    }
+
     async function load(){
       const res = await fetch('./data.json', {cache:'no-store'});
       const data = await res.json();
@@ -50,17 +105,19 @@
         const el = document.createElement('div');
         el.className = 'card';
         el.innerHTML = `
-          <h2>${leaf.title}</h2>
-          <div class="meta">Themes: ${(leaf.themes||[]).join(', ')} · Age: ${leaf.age_range||''}</div>
-          <div class="meta" style="margin-top:6px;">Source: ${leaf.source?.scroll_id || ''} — ${leaf.source?.title || ''}</div>
-          <a class="btn" href="${leaf.url}">Open Leaf →</a>
-        `;
+          <div class="art">${art(leaf.id)}</div>
+          <div class="card-body">
+            <h2>${leaf.title}</h2>
+            <div class="chips">${(leaf.themes||[]).map(t=>`<span class="chip">${t}</span>`).join('')}<span class="chip age">Ages ${leaf.age_range||'5–8'}</span></div>
+            <div class="meta">📖 Source: ${leaf.source?.scroll_id || ''} — ${leaf.source?.title || ''}</div>
+            <a class="btn" href="${leaf.url}">Open Leaf →</a>
+          </div>`;
         grid.appendChild(el);
       }
     }
     load().catch(err=>{
       const grid = document.getElementById('grid');
-      grid.innerHTML = `<div class="card"><b>Could not load Leaves.</b><div class="meta">${err}</div></div>`;
+      grid.innerHTML = `<div class="card"><div class="card-body"><b>Could not load Leaves.</b><div class="meta">${err}</div></div></div>`;
     });
   </script>
 </body>
