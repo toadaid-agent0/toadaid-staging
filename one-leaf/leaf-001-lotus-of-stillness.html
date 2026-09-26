@@ -4,36 +4,63 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>🍃 Leaf 001 — The Lotus of Stillness | ToadAid</title>
+  <meta name="description" content="Leaf 001 — The Lotus of Stillness: a calm pond tale for ages 5–8 about stillness and patience, adapted from the Toadgod Lore scrolls." />
   <link rel="stylesheet" href="/style.css" />
   <style>
-    :root{ --bg:#f7f7f2; --card:#fff; --ink:#222; --muted:#666; --ring:#ddd; --shadow:0 2px 10px rgba(0,0,0,.06); }
-    body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); }
-    header{ position:sticky; top:0; background:#fff; border-bottom:1px solid var(--ring); padding:12px 16px; z-index:20; }
-    header a{ text-decoration:none; color:var(--ink); }
-    header .crumb{ color:var(--muted); font-size:.92rem; }
-    main{ max-width:860px; margin:0 auto; padding:16px; }
-    .card{ background:var(--card); border:1px solid var(--ring); border-radius:12px; padding:14px 16px; box-shadow:var(--shadow); margin-bottom:12px; }
-    h1{ margin:6px 0 0 0; font-size:1.25rem; }
-    h2{ margin:0 0 10px 0; font-size:1.05rem; }
-    p{ line-height:1.5; }
+    :root{
+      --bg:#f5f1e6; --card:#fff; --ink:#2f2f2f; --muted:#6b7266;
+      --green:#355e3b; --green-soft:#eef4ea; --green-line:#d8e4d2;
+      --gold:#ffd23f; --gold-ink:#1a1a1a;
+      --ring:#e3ddcc; --shadow:0 2px 10px rgba(0,0,0,.07);
+    }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    header{ background:var(--green); color:#fff; padding:24px 16px 20px; text-align:center; }
+    header .crumb{ display:inline-block; color:#cfe3d4; font-size:.9rem; text-decoration:none; margin-bottom:8px; }
+    header .crumb:hover{ color:#fff; text-decoration:underline; }
+    header h1{ margin:0; font-size:1.5rem; letter-spacing:.3px; }
+    header .sub{ margin-top:6px; color:#e2e2e2; font-size:.95rem; font-style:italic; }
+    main{ max-width:860px; margin:0 auto; padding:18px 16px 8px; }
+    .card{ background:var(--card); border:1px solid var(--ring); border-radius:16px; padding:16px 18px; box-shadow:var(--shadow); margin-bottom:14px; }
+    h2{ margin:0 0 10px 0; font-size:1.08rem; color:#2f4a35; }
+    p{ line-height:1.55; }
     .muted{ color:var(--muted); }
-    .pill{ display:inline-block; font-size:.78rem; padding:2px 10px; border:1px solid #ccc; background:#fff; border-radius:999px; margin-right:6px; margin-top:6px; }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:10px; }
-    .big{ font-size:1.05rem; }
-    footer{ text-align:center; color:#777; font-size:.85rem; padding:24px 12px; }
-    .btn{ display:inline-block; padding:8px 10px; border:1px solid var(--ring); border-radius:10px; background:#fff; color:var(--ink); text-decoration:none; }
-    .btn:hover{ background:#fafafa; }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin-bottom:14px; }
+    .grid .card{ margin-bottom:0; }
+    .big{ font-size:1.06rem; }
+    .chip{ display:inline-block; background:var(--green-soft); border:1px solid var(--green-line); color:var(--green); border-radius:999px; padding:3px 12px; font-size:.85rem; margin:3px 6px 3px 0; }
+    .art{ height:130px; display:flex; align-items:center; justify-content:center; background:linear-gradient(#eaf4f0,#d9ebe4); border-radius:12px; margin-bottom:12px; }
+    .art svg{ width:200px; height:120px; }
+    .parents{ background:#fff8e6; border-color:#f0e2b6; }
+    .parents a{ color:var(--green); font-weight:600; }
+    a.btn{ display:inline-block; padding:9px 16px; border:none; border-radius:10px; text-decoration:none; color:var(--gold-ink); background:var(--gold); font-weight:700; box-shadow:0 2px 6px rgba(0,0,0,.12); }
+    a.btn:hover{ background:#f5c518; }
+    footer{ text-align:center; color:#777; font-size:.85rem; padding:26px 12px; }
   </style>
 </head>
 <body>
   <header>
-    <div class="crumb"><a href="/one-leaf/">← One Leaf for the Young</a> <span class="muted">/ Leaf 001</span></div>
+    <a class="crumb" href="/one-leaf/">← One Leaf for the Young</a>
     <h1>🍃 Leaf 001 — The Lotus of Stillness</h1>
-    <div class="muted">Ages 5–8 · Themes: stillness, patience, gentleness</div>
+    <div class="sub">Ages 5–8 · Themes: stillness, patience, gentleness</div>
   </header>
 
   <main>
     <section class="card">
+      <div class="art">
+        <svg viewBox="0 0 200 120" role="img" aria-label="A lotus resting on a still pond" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="162" cy="28" r="10" fill="#ffd23f" opacity=".55"/>
+          <ellipse cx="100" cy="92" rx="86" ry="17" fill="#bfe0d8"/>
+          <ellipse cx="100" cy="90" rx="46" ry="10" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="2"/>
+          <ellipse cx="100" cy="90" rx="62" ry="13" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="2"/>
+          <ellipse cx="58" cy="88" rx="20" ry="6" fill="#4c8c5c"/>
+          <path d="M100 44 C94 60 94 72 100 80 C106 72 106 60 100 44 Z" fill="#f7c9d4"/>
+          <path d="M100 80 C88 76 79 65 82 52 C93 59 99 68 100 80 Z" fill="#f2b8c9"/>
+          <path d="M100 80 C112 76 121 65 118 52 C107 59 101 68 100 80 Z" fill="#f2b8c9"/>
+          <path d="M100 80 C86 83 73 79 68 68 C81 68 93 73 100 80 Z" fill="#eeaec2"/>
+          <path d="M100 80 C114 83 127 79 132 68 C119 68 107 73 100 80 Z" fill="#eeaec2"/>
+        </svg>
+      </div>
       <h2>Kid Story (read aloud)</h2>
       <p class="big">
         In a quiet pond, a little seed rested under the water.
@@ -64,9 +91,9 @@
       <div class="card">
         <h2>Word Pond (3 words)</h2>
         <div>
-          <span class="pill"><b>stillness</b> = quiet on purpose</span>
-          <span class="pill"><b>patience</b> = waiting without getting mean</span>
-          <span class="pill"><b>roots</b> = the hidden part that holds you strong</span>
+          <span class="chip"><b>stillness</b> = quiet on purpose</span>
+          <span class="chip"><b>patience</b> = waiting without getting mean</span>
+          <span class="chip"><b>roots</b> = the hidden part that holds you strong</span>
         </div>
       </div>
 
@@ -86,13 +113,13 @@
       </div>
     </section>
 
-    <section class="card">
+    <section class="card parents">
       <h2>For Parents (Guardian link to canon)</h2>
       <p class="muted">
         This Leaf is a simplified teaching adaptation.
         Canon source scroll:
         <b>TOBY_QA1006 — What Is the Lotus of Stillness?</b>
-        (archive path: <code>/home/tommy/mirror-v4/lore-scrolls/TOBY_QA1006_WhatIsTheLotusOfStillness_EN.md</code>)
+        preserved in the <a href="/lore/">Toadgod Lore Library</a>.
       </p>
       <p>
         <a class="btn" href="/lore/">Open Lore Library →</a>
