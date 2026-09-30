@@ -3,13 +3,17 @@
     "name": "One Leaf for the Young",
     "age_range": "5–8",
     "purpose": "Children’s adaptations for learning and reflection. Canon remains in the Lore Library; each Leaf links back to its source.",
-    "version": "v1"
+    "version": "v2"
   },
   "leaves": [
     {
       "id": "LEAF_001",
       "title": "The Lotus of Stillness",
-      "themes": ["stillness", "patience", "gentleness"],
+      "themes": [
+        "stillness",
+        "patience",
+        "gentleness"
+      ],
       "age_range": "5–8",
       "source": {
         "scroll_id": "TOBY_QA1006",
@@ -22,7 +26,11 @@
     {
       "id": "LEAF_002",
       "title": "Water Doesn’t Fight the Stone",
-      "themes": ["patience", "endurance", "gentleness"],
+      "themes": [
+        "patience",
+        "endurance",
+        "gentleness"
+      ],
       "age_range": "5–8",
       "source": {
         "scroll_id": "TOBY_L490",
@@ -31,6 +39,57 @@
         "note": "Leaf 002 draws from the canon line: ‘time erodes stone’ — teaching gentle endurance."
       },
       "url": "leaf-002-water-stone.html"
+    },
+    {
+      "id": "LEAF_003",
+      "title": "The Leaf That Waited",
+      "themes": [
+        "patience",
+        "growth",
+        "trust"
+      ],
+      "age_range": "5–8",
+      "source": {
+        "scroll_id": "TOBY_L189",
+        "title": "The Leaf's Patience",
+        "path": "lore-scrolls/TOBY_L189_TheLeafsPatience_2025-06-10_EN.md",
+        "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
+      },
+      "url": "leaf-003-the-leaf-that-waited.html"
+    },
+    {
+      "id": "LEAF_004",
+      "title": "The First Ripple",
+      "themes": [
+        "kindness",
+        "ripples",
+        "small acts"
+      ],
+      "age_range": "5–8",
+      "source": {
+        "scroll_id": "TOBY_Z139",
+        "title": "The Sutra of the First Ripple",
+        "path": "lore-scrolls/TOBY_Z139_TheSutraOfTheFirstRipple_2025-11-14_EN.md",
+        "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
+      },
+      "url": "leaf-004-the-first-ripple.html"
+    },
+    {
+      "id": "LEAF_005",
+      "title": "The Pond at Night",
+      "themes": [
+        "night",
+        "rest",
+        "gentleness"
+      ],
+      "age_range": "5–8",
+      "source": {
+        "scroll_id": "TOBY_QA1103",
+        "title": "Why Is the Night Sky a Scroll of Patience?",
+        "path": "lore-scrolls/TOBY_QA1103_WhyIsTheNightSkyAScrollOfPatience_EN.md",
+        "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
+      },
+      "url": "leaf-005-the-pond-at-night.html"
     }
   ]
 }
