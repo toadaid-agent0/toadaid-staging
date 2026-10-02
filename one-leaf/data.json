@@ -90,6 +90,23 @@
         "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
       },
       "url": "leaf-005-the-pond-at-night.html"
+    },
+    {
+      "id": "LEAF_006",
+      "title": "The Stone You Can Put Down",
+      "themes": [
+        "letting go",
+        "burdens",
+        "gentleness"
+      ],
+      "age_range": "5–8",
+      "source": {
+        "scroll_id": "TOBY_Z114",
+        "title": "The Sutra of the Uncarried Stone",
+        "path": "lore-scrolls/TOBY_Z114_TheSutraOfTheUncarriedStone_2025-11-14_EN.md",
+        "note": "Source scroll is preserved in the Lore Scrolls archive; this Leaf is a simplified teaching adaptation."
+      },
+      "url": "leaf-006-the-stone-you-can-put-down.html"
     }
   ]
 }
